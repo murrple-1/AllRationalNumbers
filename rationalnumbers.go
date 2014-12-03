@@ -15,8 +15,7 @@ func generate_depthFirst(numerator uint, denominator uint, currentDepth uint, ma
 	if currentDepth >= maxDepth {
 		return
 	}
-	value := float64(numerator) / float64(denominator)
-	fmt.Printf("%d/%d = %f\n", numerator, denominator, value)
+	fmt.Printf("%d / %d = %g\n", numerator, denominator, float64(numerator)/float64(denominator))
 	sum := numerator + denominator
 	newDepth := currentDepth + 1
 	generate_depthFirst(numerator, sum, newDepth, maxDepth)
